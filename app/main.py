@@ -16,8 +16,8 @@ html = """
     <body>
         <h1>WebSocket Messages</h1>
         <button id="reconnectButton">Reconnect</button>
-        <ul id='messages'>
-        </ul>
+        <ol id='messages'>
+        </ol>
         <script>
             ws = new WebSocket("ws://localhost:8000/ws");
 
