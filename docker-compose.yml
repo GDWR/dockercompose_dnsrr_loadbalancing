@@ -8,6 +8,16 @@ services:
     depends_on:
       - app
 
+  redis:
+    image: redis:6.2.5
+
+  producer:
+    build: ./producer
+    depends_on:
+      - redis
+    deploy:
+      replicas: 2
+
   app:
     build: ./app
     deploy:
